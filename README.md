@@ -8,7 +8,9 @@ Key Features
 - State Management:** Powered by `Bloc/Cubit` for predictable and efficient UI updates.
 - Modular Structure:** Organized code for better scalability and maintenance.
   
-https://github.com/user-attachments/assets/1c10aeb3-2871-4320-b19f-78ee624011b8
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/1c10aeb3-2871-4320-b19f-78ee624011b8" width="300" autoplay loop muted></video>
+</p>
 
 Project Structure
 The project follows a feature-first modular approach:
