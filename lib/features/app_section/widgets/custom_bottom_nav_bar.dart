@@ -17,7 +17,7 @@ class CustomBottomNavBar extends StatelessWidget {
     return Container(
       height: 70,
       decoration: const BoxDecoration(
-        color: Colors.cyanAccent,
+        
         boxShadow: [
           BoxShadow(
             color: Colors.black26,
@@ -37,7 +37,7 @@ class CustomBottomNavBar extends StatelessWidget {
               width: MediaQuery.of(context).size.width / 3,
               height: 2,
               decoration: const BoxDecoration(
-                color: Colors.tealAccent,
+                color: Color.fromARGB(255, 152, 158, 157),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(2),
                   bottomRight: Radius.circular(2),
@@ -46,28 +46,28 @@ class CustomBottomNavBar extends StatelessWidget {
             ),
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               _NavItem(
-                iconPath: AppIcons.businessIcon,
-                selectedIconPath:  AppIcons.businessIcon,
+                selectedIconPath: AppIcons.businessIcon,
                 label: AppStrings.business,
                 isSelected: currentIndex == 0,
                 onTap: () => onTap(0),
+                icon: Icon(Icons.business, size: 40),
               ),
               _NavItem(
-                iconPath:  AppIcons.businessIcon,
-                selectedIconPath:  AppIcons.businessIcon,
-                label: AppStrings.business,
+                selectedIconPath: AppIcons.businessIcon,
+                label: AppStrings.tech,
                 isSelected: currentIndex == 1,
                 onTap: () => onTap(1),
+                icon: Icon(Icons.devices, size: 40),
               ),
               _NavItem(
-                iconPath:  AppIcons.businessIcon,
-                selectedIconPath:  AppIcons.businessIcon,
-                label:  AppIcons.businessIcon,
+                selectedIconPath: AppIcons.businessIcon,
+                label: AppStrings.general,
                 isSelected: currentIndex == 2,
                 onTap: () => onTap(2),
+                icon: Icon(Icons.newspaper_rounded, size: 40),
               ),
             ],
           ),
@@ -79,21 +79,23 @@ class CustomBottomNavBar extends StatelessWidget {
 
 class _NavItem extends StatelessWidget {
   const _NavItem({
-    required this.iconPath,
     required this.selectedIconPath,
     required this.label,
     required this.isSelected,
     required this.onTap,
+    required this.icon,
   });
-  final String iconPath;
   final String selectedIconPath;
   final String label;
   final bool isSelected;
   final VoidCallback onTap;
+  final Icon icon;
 
   @override
   Widget build(BuildContext context) {
-    final color = isSelected ? AppColors.skyBlueColor : AppColors.greyColor;
+    final color = isSelected
+        ? const Color.fromARGB(255, 97, 104, 108)
+        : AppColors.greyColor;
 
     return Expanded(
       child: InkWell(
@@ -108,7 +110,7 @@ class _NavItem extends StatelessWidget {
               transitionBuilder: (child, animation) {
                 return ScaleTransition(scale: animation, child: child);
               },
-              child: Image.asset( AppIcons.businessIcon),
+              child: icon,
             ),
             const SizedBox(height: 4),
             AnimatedDefaultTextStyle(

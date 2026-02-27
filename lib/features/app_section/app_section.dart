@@ -1,40 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:news_app_new_version/features/app_section/widgets/custom_bottom_nav_bar.dart';
+import 'package:news_app_new_version/features/general/presentation/view/general_screen.dart';
+import 'package:news_app_new_version/features/business/presentation/view/business_screen.dart';
+import 'package:news_app_new_version/features/technology/presentation/view/tech_screen.dart';
 
-import 'package:news_app_new_version/features/home/presentation/view/business_screen.dart';
-
-
-class App extends StatefulWidget {
-  const App({super.key});
+class AppSection extends StatefulWidget {
+  const AppSection({super.key});
   static const routeName = '/app';
 
   @override
-  State<App> createState() => _AppState();
+  State<AppSection> createState() => _AppSectionState();
 }
 
-class _AppState extends State<App> {
+class _AppSectionState extends State<AppSection> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = const [
     BusinessScreen(),
-    // SearchScreen(),
-    // WatchListScreen(),
+    TechScreen(),
+    GeneralNews(),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(index: _currentIndex, children: _screens),
-      bottomNavigationBar: CustomBottomNavBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
+    return SafeArea(
+      child: Scaffold(
+        body: IndexedStack(index: _currentIndex, children: _screens),
+        bottomNavigationBar: CustomBottomNavBar(
+          currentIndex: _currentIndex,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+        ),
       ),
     );
   }
 }
-
-
