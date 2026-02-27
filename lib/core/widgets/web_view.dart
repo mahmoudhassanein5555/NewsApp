@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_new_version/core/constans/app_colors.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class NewsWebView extends StatefulWidget {
@@ -26,7 +25,7 @@ class _NewsWebViewState extends State<NewsWebView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Details",style: TextStyle(color: AppColors.lowBlackColor),),centerTitle: true,),
+      appBar: AppBar(title: const Text("Details",),centerTitle: true,),
       body: WebViewWidget(controller: controller),
     );
   }
