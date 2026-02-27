@@ -7,6 +7,8 @@ Key Features
 - Dynamic Theming:** Seamless switching between **Light** and **Dark** modes using `Cubit`.
 - State Management:** Powered by `Bloc/Cubit` for predictable and efficient UI updates.
 - Modular Structure:** Organized code for better scalability and maintenance.
+  
+https://github.com/user-attachments/assets/1c10aeb3-2871-4320-b19f-78ee624011b8
 
 Project Structure
 The project follows a feature-first modular approach:
@@ -25,17 +27,13 @@ Prerequisites
 
  Installation
 1.  Clone the repository:
-    ```bash
-    git clone [https://github.com/your-username/news_app_new_version.git](https://github.com/your-username/news_app_new_version.git)
-    ```
+   git clone https://github.com/your-username/news_app_new_version.git
+    
 2.  Install dependencies:
-    ```bash
     flutter pub get
-    ```
+    
 3.  Run the application:
-    ```bash
     flutter run
-    ```
 
 Theming Implementation
 The app utilizes a `ThemeCubit` to broadcast `ThemeMode` changes across the `MaterialApp`, ensuring a consistent look and feel whether in Light or Dark mode.
@@ -45,3 +43,6 @@ If you encounter any `import` errors, ensure the file paths in `lib/core/utils/`
 
 License
 This project is for educational purposes. Feel free to use and modify it.
+
+
+
