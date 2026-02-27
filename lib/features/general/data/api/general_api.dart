@@ -29,5 +29,3 @@ class GeneralNewsApi {
     }
   }
 }
-// https://newsapi.org/v2/everything?domains=wsj.com&
-// apiKey=7d9bd4a2102b408bbb205206a0019f9d
