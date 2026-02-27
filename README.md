@@ -1,16 +1,47 @@
-# news_app_new_version
+ News App
 
-A new Flutter project.
+A modern Flutter application for browsing news, built with a focus on **Clean Architecture** principles and dynamic **Theming**.
 
-## Getting Started
+Key Features
+- Multi-Category News:** Specialized modules for Business, Technology, and General news.
+- Dynamic Theming:** Seamless switching between **Light** and **Dark** modes using `Cubit`.
+- State Management:** Powered by `Bloc/Cubit` for predictable and efficient UI updates.
+- Modular Structure:** Organized code for better scalability and maintenance.
 
-This project is a starting point for a Flutter application.
+Project Structure
+The project follows a feature-first modular approach:
 
-A few resources to get you started if this is your first Flutter project:
+-  `lib/features/`: Contains the core business logic and UI for news categories.
+-  `lib/core/utils/`: 
+-  `theme_cubit.dart`: Logic for theme switching.
+-  `app_theme.dart`: Centralized theme definitions (Colors, Fonts, Card Styles).
+-  `main.dart`: App entry point and Bloc provider setup.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Getting Started
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Prerequisites
+- Flutter SDK (Stable)
+- Dart SDK
+
+ Installation
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/your-username/news_app_new_version.git](https://github.com/your-username/news_app_new_version.git)
+    ```
+2.  Install dependencies:
+    ```bash
+    flutter pub get
+    ```
+3.  Run the application:
+    ```bash
+    flutter run
+    ```
+
+Theming Implementation
+The app utilizes a `ThemeCubit` to broadcast `ThemeMode` changes across the `MaterialApp`, ensuring a consistent look and feel whether in Light or Dark mode.
+
+Pro-Tip
+If you encounter any `import` errors, ensure the file paths in `lib/core/utils/` match the case-sensitive naming conventions of your OS.
+
+License
+This project is for educational purposes. Feel free to use and modify it.
