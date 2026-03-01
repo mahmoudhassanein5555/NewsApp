@@ -3,10 +3,10 @@
 A modern Flutter application for browsing news, built with a focus on **Clean Architecture** principles and dynamic **Theming**.
 
 Key Features
-- Multi-Category News:** Specialized modules for Business, Technology, and General news.
-- Dynamic Theming:** Seamless switching between **Light** and **Dark** modes using `Cubit`.
-- State Management:** Powered by `Bloc/Cubit` for predictable and efficient UI updates.
-- Modular Structure:** Organized code for better scalability and maintenance.
+- Multi-Category News:Specialized modules for Business, Technology, and General news.
+- Dynamic Theming:Seamless switching between **Light** and **Dark** modes using `Cubit`.
+- State Management:Powered by `Bloc/Cubit` for predictable and efficient UI updates.
+- Modular Structure:Organized code for better scalability and maintenance.
   
 <p align="center">
   <video src="https://github.com/user-attachments/assets/1c10aeb3-2871-4320-b19f-78ee624011b8" width="300" autoplay loop muted></video>
@@ -43,7 +43,7 @@ The app utilizes a `ThemeCubit` to broadcast `ThemeMode` changes across the `Mat
 Pro-Tip
 If you encounter any `import` errors, ensure the file paths in `lib/core/utils/` match the case-sensitive naming conventions of your OS.
 
-License
+License:
 This project is for educational purposes. Feel free to use and modify it.
 
 
