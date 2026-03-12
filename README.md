@@ -28,8 +28,7 @@ Prerequisites
 - Dart SDK
 
  Installation
-1.  Clone the repository:
-   git clone https://github.com/your-username/news_app_new_version.git
+1.  Clone the repository
     
 2.  Install dependencies:
     flutter pub get
